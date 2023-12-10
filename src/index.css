@@ -27,10 +27,10 @@ body {
 
 .app {
   min-height: 66vh;
-  display: grid;
-  grid-template-columns: 34rem 44rem;
-  column-gap: 4rem;
-  align-items: start;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding: 0 15px;
 }
 
 .button {
@@ -48,6 +48,9 @@ body {
   background-color: var(--color-dark);
 }
 
+.sidebar:not(:last-child) {
+  margin-bottom: 20px;
+}
 .sidebar ul {
   list-style: none;
   display: flex;
@@ -97,6 +100,11 @@ body {
 .sidebar > .button {
   float: right;
   margin-right: 1.2rem;
+}
+@media (max-width: 662px) {
+  .app {
+    flex-direction: column;
+  }
 }
 
 .green {
