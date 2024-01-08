@@ -72,6 +72,7 @@ export default function App() {
         <FormSplitBill
           selectedFriend={selectedFriend}
           onSplitBill={handleSplitBill}
+          key={selectedFriend.name}
         />
       )}
     </div>
@@ -183,7 +184,7 @@ function FormSplitBill({ selectedFriend, onSplitBill }) {
         }
       />
 
-      <label>👧👦{selectedFriend.name}s expense</label>
+      <label>👧👦{selectedFriend.name}'s expense</label>
       <input type="text" value={paidByFriend} disabled />
 
       <label>🤑Who is paying the bill</label>
